@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_create_feed"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:contentInsetStart="10dp"
+        app:contentInsetEnd="10dp"
+        android:background="@color/white"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_arrow_west_24px"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_toolbar"
+                android:textStyle="bold"
+                android:textSize="@dimen/toolbar_title_text"
+                android:textColor="@color/black"
+
+                android:layout_marginStart="22dp"
+
+                app:layout_constraintStart_toEndOf="@id/ib_back"
+                app:layout_constraintTop_toTopOf="@id/ib_back"
+                app:layout_constraintBottom_toBottomOf="@id/ib_back" />
+
+
+            <ImageButton
+                android:id="@+id/ib_upload"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparency"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_check_blue_24px"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbar_create_feed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_multi"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                android:layout_margin="5dp"
+
+                android:src="@drawable/ic_multiple_selected_white_18dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparency"
+            style="@style/et_default"
+
+            android:layout_gravity="center"
+
+            android:minLines="3"
+            android:hint="@string/et_feed_content_hint"
+            android:textSize="@dimen/dialog_description_text" />
+    </LinearLayout>
+    <View
+        style="@style/horizontal_bar_whitegray"
+        app:layout_constraintTop_toBottomOf="@id/ll_edit_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_tag_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_edit_content">
+
+        <TextView
+            android:id="@+id/tv_tag_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_gravity="center"
+
+            android:text="@string/tv_tag_user"
+            android:textSize="@dimen/dialog_btn_text"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <View
+        style="@style/horizontal_bar_whitegray"
+        app:layout_constraintTop_toBottomOf="@id/ll_tag_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_tag_user">
+
+        <TextView
+            android:id="@+id/tv_add_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_gravity="center"
+
+            android:text="@string/tv_add_location"
+            android:textSize="@dimen/dialog_btn_text"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <View
+        style="@style/horizontal_bar_whitegray"
+        app:layout_constraintTop_toBottomOf="@id/ll_add_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_locations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_add_location">
+
+        <HorizontalScrollView
+            android:id="@+id/sv_locations"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:scrollbars="none"
+            android:fadeScrollbars="true"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdgeLength="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <Button
+                    style="@style/btn_tag"
+                    android:layout_marginEnd="8dp"
+                    android:text="서울" />
+                <Button
+                    style="@style/btn_tag"
+                    android:layout_marginEnd="8dp"
+                    android:text="노르웨이의숲" />
+                <Button
+                    style="@style/btn_tag"
+                    android:layout_marginEnd="8dp"
+                    android:text="안암동" />
+                <Button
+                    style="@style/btn_tag"
+                    android:layout_marginEnd="8dp"
+                    android:text="성신여대 럼블" />
+                <Button
+                    style="@style/btn_tag"
+                    android:layout_marginEnd="8dp"
+                    android:text="Seongbuk District" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+    <View
+        style="@style/horizontal_bar_whitegray"
+        app:layout_constraintTop_toBottomOf="@id/ll_locations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_other_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_locations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_feed_other_media"
+            android:textSize="@dimen/dialog_btn_text"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_facebook"
+                android:textSize="@dimen/dialog_btn_text"
+                android:textColor="@color/black" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_facebook"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                style="@style/switch_blue"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_twitter"
+                android:textSize="@dimen/dialog_btn_text"
+                android:textColor="@color/black" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_twitter"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                style="@style/switch_blue"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_tumblr"
+                android:textSize="@dimen/dialog_btn_text"
+                android:textColor="@color/black" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_tumblr"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                style="@style/switch_blue"
+                android:gravity="end" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        style="@style/horizontal_bar_whitegray"
+        app:layout_constraintTop_toBottomOf="@id/ll_other_media"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="@string/tv_advanced_settings"
+        android:textColor="@color/et_dialog_gray"
+        android:textSize="@dimen/tv_helper"
+
+        app:layout_constraintTop_toBottomOf="@id/ll_other_media" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

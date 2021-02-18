@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="blue_deactive">#B7E5FF</color>
+    <color name="blue_active">#0095FF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparency">#00FFFFFF</color>
+    <color name="half_white">#34FFFFFF</color>
+
+    <color name="white_active">#FFFFFFFF</color>
+    <color name="white_deactive">#88FFFFFF</color>
+
+    <color name="text_link_navy">#0F3A6E</color>
+    <color name="text_lightgray">#A7A7A7</color>
+    <color name="text_black">#2F2F2F</color>
+
+    <color name="et_stroke_whitegray">#5ED8D8D8</color>
+    <color name="et_solid_whitegray">#33D8D8D8</color>
+
+    <color name="et_dialog_gray">#ACACAC</color>
+
+    <color name="btn_half_black">#80333333</color>
+    <color name="btn_half_blue">#B20095FF</color>
+
+    <color name="btn_tag_solid_whitegray">#EFEFEF</color>
+    <color name="btn_tag_text_gray">#999999</color>
+
+    <color name="switch_deactive_thumb">#F1F1F1</color>
+    <color name="switch_deactive_track">#CCCCCC</color>
+    <color name="switch_active_thumb">#3897f0</color>
+    <color name="switch_active_track">#9bcbf7</color>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dialog_padding_start_and_end"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="15dp"
+
+        android:src="@drawable/img_change_profile"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="@string/tv_add_profile_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:layout_margin="15dp"
+
+        android:text="@string/tv_add_profile_helper"
+        android:textColor="@color/et_dialog_gray"
+        android:textSize="@dimen/tv_helper" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        style="@style/btn_blue_text"
+        android:enabled="true"
+        android:layout_marginTop="15dp"
+
+        android:background="@drawable/btn_blue_selector"
+        android:textStyle="bold"
+        android:textColor="@color/white_active"
+        android:text="@string/btn_add_profile_ok" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_skip"
+        style="@style/btn_blue_text"
+
+        android:enabled="true"
+        android:background="@null"
+        android:textColor="@color/blue_active"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+
+        android:text="@string/btn_add_profile_skip" />
+</LinearLayout>

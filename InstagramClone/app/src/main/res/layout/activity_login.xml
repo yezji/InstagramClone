@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.login.LoginActivity"
+    android:gravity="center">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_launguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:text="@string/tv_language"
+            android:textSize="@dimen/et_login_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_login_logo"
+                android:layout_width="180dp"
+                android:layout_height="64dp"
+
+                android:src="@drawable/img_login_logo" />
+
+            <EditText
+                android:id="@+id/et_id"
+                style="@style/et_account"
+                android:inputType="text"
+                android:hint="@string/et_hint_id" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:hintEnabled="false"
+                android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/et_pw"
+                    style="@style/et_account"
+                    android:inputType="textPassword"
+                    android:hint="@string/et_hint_pw" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login_app"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@drawable/btn_blue_selector"
+                android:enabled="false"
+                android:textColor="@color/white_deactive"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+
+                android:textSize="@dimen/et_login_text"
+                android:text="@string/btn_login_app" />
+
+            <LinearLayout
+                android:id="@+id/ll_btn_find_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/tv_find_first"
+                    android:textSize="@dimen/tv_helper"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:text="@string/tv_find_second"
+                    android:textSize="@dimen/tv_helper"
+                    android:textColor="@color/text_link_navy"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                android:layout_marginTop="15dp">
+                <View
+                    style="@style/horizontal_bar_whitegray"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/tv_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+
+                    android:textSize="@dimen/et_login_text"
+                    android:text="@string/tv_divider_or" />
+                <View
+                    style="@style/horizontal_bar_whitegray"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+
+                    app:layout_constraintBottom_toBottomOf="@id/tv_divider"
+                    app:layout_constraintEnd_toEndOf="@id/et_id"
+                    app:layout_constraintStart_toEndOf="@id/tv_divider"
+                    app:layout_constraintTop_toTopOf="@id/tv_divider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_btn_login_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_login_facebook" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/tv_login_facebook"
+                    android:textSize="@dimen/et_login_text"
+                    android:textColor="@color/blue_active"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="bottom|center">
+
+            <View
+                style="@style/horizontal_bar_whitegray"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_btn_make_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="@dimen/tv_helper"
+                    android:text="@string/tv_register_first" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:text="@string/tv_register_second"
+                    android:textSize="@dimen/tv_helper"
+                    android:textColor="@color/text_link_navy"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

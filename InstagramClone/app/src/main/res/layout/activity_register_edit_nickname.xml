@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dialog_padding_start_and_end"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="@string/tv_edit_nickname_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/dialog_description_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="@string/tv_edit_nickname_helper"
+        android:textColor="@color/et_dialog_gray"
+        android:textSize="@dimen/tv_helper" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textfield_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        android:layout_marginTop="15dp">
+        <EditText
+            android:id="@+id/et_nickname"
+            style="@style/et_account"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+
+            android:inputType="text"
+            android:hint="@string/et_register_nickname_hint"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        style="@style/btn_blue_text"
+        android:enabled="false"
+        android:layout_marginTop="15dp"
+
+        android:textStyle="bold"
+        android:textColor="@color/white_deactive"
+        android:text="@string/btn_next" />
+
+</LinearLayout>

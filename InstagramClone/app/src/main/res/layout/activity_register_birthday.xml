@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.register.birthday.RegisterBirthdayActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/img_register_birthday" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="@string/tv_birthday_title" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="@dimen/dialog_description_text"
+        android:text="@string/tv_birthday_description"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="@dimen/dialog_description_text"
+        android:text="@string/tv_birthday_link"
+        android:textColor="@color/text_link_navy"
+        android:textAlignment="center"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="15dp">
+        <EditText
+            android:id="@+id/et_birthday_fixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/et_account"
+            android:focusable="false"
+            android:clickable="false"
+
+            android:layout_marginTop="0dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:inputType="date"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tv_birthday_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="30dp"
+            android:text="0세"
+            android:textColor="@color/et_dialog_gray"
+
+            app:layout_constraintEnd_toEndOf="@id/et_birthday_fixed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="bottom|center">
+        <View
+            style="@style/horizontal_bar_whitegray" />
+        <Button
+            android:id="@+id/btn_birthday_next"
+            style="@style/btn_blue_text"
+            android:enabled="true"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginStart="@dimen/dialog_padding_start_and_end"
+            android:layout_marginEnd="@dimen/dialog_padding_start_and_end"
+            android:textColor="@color/white_active"
+            android:text="@string/btn_next" />
+        <DatePicker
+            android:id="@+id/datepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="@string/tv_scope_title" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/dialog_padding_start_and_end"
+        android:layout_marginEnd="@dimen/dialog_padding_start_and_end"
+
+        android:textSize="@dimen/tv_helper"
+        android:text="@string/tv_scope_helper"
+        android:textColor="@color/et_dialog_gray"
+        android:textAlignment="center"/>
+
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dialog_padding_start_and_end"
+            android:paddingEnd="@dimen/dialog_padding_start_and_end"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:textSize="@dimen/dialog_description_text"
+                    android:text="@string/tv_scope_1_title"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|start"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="@dimen/tv_helper"
+                    android:text="@string/tv_scope_1_helper"
+                    android:textColor="@color/et_dialog_gray"
+                    android:gravity="center_vertical|start" />
+            </LinearLayout>
+            <RadioButton
+                android:id="@+id/rb_scope_lock"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:checked="false"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_blue_selector_circle" />
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_bar_whitegray"
+            android:layout_marginStart="@dimen/dialog_padding_start_and_end"
+            android:layout_marginEnd="@dimen/dialog_padding_start_and_end" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dialog_padding_start_and_end"
+            android:paddingEnd="@dimen/dialog_padding_start_and_end"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/ic_unlock"
+                    android:textSize="@dimen/dialog_description_text"
+                    android:text="@string/tv_scope_2_title"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical|start" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="@dimen/tv_helper"
+                    android:text="@string/tv_scope_2_helper"
+                    android:textColor="@color/et_dialog_gray"
+                    android:gravity="center_vertical|start" />
+            </LinearLayout>
+            <RadioButton
+                android:id="@+id/rb_scope_unlock"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:checked="false"
+                android:button="@android:color/transparent"
+                android:background="@drawable/checkbox_blue_selector_circle" />
+        </LinearLayout>
+    </RadioGroup>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="bottom|center">
+        <View
+            style="@style/horizontal_bar_whitegray" />
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/btn_blue_text"
+
+            android:layout_margin="@dimen/dialog_padding_start_and_end"
+
+            android:enabled="false"
+            android:textColor="@color/white_deactive"
+            android:text="@string/btn_next"/>
+
+    </LinearLayout>
+
+</LinearLayout>

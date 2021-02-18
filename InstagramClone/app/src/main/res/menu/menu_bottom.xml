@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/btn_bnv_home"
+        android:title="home" />
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/btn_bnv_search"
+        android:title="search" />
+    <item
+        android:id="@+id/menu_reels"
+        android:icon="@drawable/btn_bnv_reels"
+        android:title="reels" />
+    <item
+        android:id="@+id/menu_shopping"
+        android:icon="@drawable/btn_bnv_shopping"
+        android:title="shopping" />
+    <item
+        android:id="@+id/menu_mypage"
+        android:icon="@drawable/btn_bnv_mypage"
+        android:title="mypage" />
+</menu>

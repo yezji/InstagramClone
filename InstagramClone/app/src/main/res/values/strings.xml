@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+
+    <!--  avtivity_login  -->
+    <string name="tv_language">한국어 (대한민국)</string>
+    <string name="et_hint_id">전화번호, 이메일 주소 또는 사용자 이름</string>
+    <string name="et_hint_pw">비밀번호</string>
+    <string name="btn_login_app">로그인</string>
+    <string name="tv_find_first">로그인 상세 정보를 잊으셨나요?</string>
+    <string name="tv_find_second">로그인 도움말 보기.</string>
+    <string name="tv_divider_or">또는</string>
+    <string name="tv_login_facebook">Facebook으로 로그인</string>
+    <string name="tv_register_first">계정이 없으신가요?</string>
+    <string name="tv_register_second">가입하기.</string>
+    <!-- digalog login -->
+    <string name="tv_login_dialog_title">비밀번호를 잊으셨나요?</string>
+    <string name="tv_login_dialog_description">아이디나 비밀번호가 옳지 않습니다.\n다시 입력해주세요</string>
+    <string name="btn_confirm">확인</string>
+
+    <!--  activity register id  -->
+    <string name="tl_id_phone">전화번호</string>
+    <string name="tl_id_email">이메일</string>
+    <string name="et_phone_hint">휴대폰</string>
+    <string name="tv_phone_helper">
+        Instagram의 업데이트 내용을 SMS로 수신할 수 있으며,<br />
+        언제든지 수신을 취소할 수 있습니다.
+    </string>
+    <string name="btn_next">다음</string>
+    <string name="tv_already_first">이미 계정이 있으신가요?</string>
+    <string name="tv_already_second">로그인하기</string>
+
+    <!--  activity auth email  -->
+    <string name="tv_authemail_title">인증 코드 입력</string>
+    <string name="tv_authemail_email">test@test.com</string>
+    <string name="tv_authemail_description">이메일 주소로 전송된 인증 코드를 입력하세요.</string>
+    <string name="tv_authemail_resend">코드 재전송.</string>
+    <string name="et_authemail_hint">인증 코드</string>
+
+    <!--  activity register nickname  -->
+    <string name="tv_register_nickname_title">이름 및 비밀번호</string>
+    <string name="et_register_nickname_hint">성명</string>
+    <string name="et_register_password_hint">비밀번호</string>
+    <string name="cb_save_password">비밀번호 저장</string>
+    <string name="btn_sync_on_contact">계속 진행하여 연락처 동기화하기</string>
+    <string name="btn_sync_off_contact">연락처를 동기화하지 않고 계속하기</string>
+    <string name="tv_register_nickname_helper">
+        연락처가 주기적으로 동기화되고 Instagram 서버에 저장되어<br />
+        친구를 빠르게 찾고 Instagram 서비스를 개선하는 데<br />
+        사용됩니다. 연락처를 삭제하려면 설정으로 이동하여 연결을<br />
+        해제하세요. 더 알아보기.
+    </string>
+
+    <!--  activity birthday  -->
+    <string name="tv_birthday_title">생일 추가</string>
+    <string name="tv_birthday_description">공개 프로필에 포함되지 않습니다.</string>
+    <string name="tv_birthday_link">왜 생일을 입력해야 하나요?</string>
+    <string name="et_year">년</string>
+    <string name="et_month">월</string>
+    <string name="et_day">일</string>
+
+    <!--  activity terms -->
+    <string name="tv_terms_title">약관 동의</string>
+    <string name="tv_terms_helper">
+        Instagram은 회원님의 개인 정보를 안전하게 보호합니다.<br />
+    새 계정을 만들려면 모든 약관에 동의하세요.
+    </string>
+    <string name="tv_terms_agree_all">약관 동의</string>
+    <string name="tv_terms_agree_1">서비스 약관(필수)</string>
+    <string name="tv_terms_agree_2">데이터 정책(필수)</string>
+    <string name="tv_terms_agree_3">위치 기반 기능(필수)</string>
+    <string name="tv_terms_agree_link">더 알아보기</string>
+
+    <!--  activity confirm nickname  -->
+    <string name="tv_confirm_nickname_title">Instagram에 오신 것을 환영합니다.</string>
+    <string name="tv_confirm_nickname_helper">팔로우할 사람을 찾고 사진을 공유해보세요.<br />사용자 이름은 언제든지 변경할 수 있습니다.</string>
+    <string name="btn_edit_nickname">사용자 이름 변경</string>
+
+    <!--  activity edit nickname  -->
+    <string name="tv_edit_nickname_title">사용자 이름 변경.</string>
+    <string name="tv_edit_nickname_helper">계정에서 사용할 사용자 이름을 선택하세요.<br />사용자 이름은 언제든지 변경할 수 있습니다.</string>
+
+    <!--  activity open scope -->
+    <string name="tv_scope_title">계정 공개 범위</string>
+    <string name="tv_scope_helper">
+        회원님이 공유하는 내용을 볼 수 있는 사람을<br />
+        선택하세요. 설정에서 언제든지 변경할 수 있습니다.
+    </string>
+    <string name="tv_scope_1_title">비공개</string>
+    <string name="tv_scope_1_helper">회원님이 승인한 계정만 회원님의 사진과<br /> 동영상을 볼 수 있습니다.</string>
+    <string name="tv_scope_2_title">전체공개</string>
+    <string name="tv_scope_2_helper">누구나 회원님의 사진과 동영상을 볼 수<br /> 있습니다.</string>
+
+    <!--  activity add profile image -->
+    <string name="tv_add_profile_title">프로필 사진 추가</string>
+    <string name="tv_add_profile_helper">친구들이 알아볼 수 있도록 프로필 사진을 추가하세요.</string>
+    <string name="btn_add_profile_ok">사진 추가</string>
+    <string name="btn_add_profile_skip">건너뛰기</string>
+
+    <!--  dialog add profilei image  -->
+    <string name="tv_dialog_add_profile_image_title">프로필 사진 변경</string>
+    <string name="tv_dialog_add_profile_image_1">Facebook에서 가져오기</string>
+    <string name="tv_dialog_add_profile_image_2">사진 찍기</string>
+    <string name="tv_dialog_add_profile_image_3">라이브러리에서 선택</string>
+
+    <!--  activity changed profile image  -->
+    <string name="tv_changed_profile_title">프로필 사진이 추가되었습니다</string>
+    <string name="tv_changed_profile_change">사진 바꾸기</string>
+    <string name="tv_changed_profile_share">이 사진을 게시물로 공유</string>
+    <string name="tv_changed_profile_helper">이 사진을 올려 첫 게시물을 만들어보세요. 사람들이 사진에 좋아요를 누르거나 댓글을 남길 수 있습니다.</string>
+
+    <!--  fragment home  -->
+    <string name="tv_story_nickname">내 스토리</string>
+    <string name="tv_feed_uploading">완료하는 중</string>
+
+    <!--  feed  -->
+    <string name="tv_liked_title">좋아요</string>
+    <string name="tv_liked_value">3,175,041</string>
+    <string name="tv_liked_count">개</string>
+    <string name="tv_feed_contents">feed contents</string>
+    <string name="tv_feed_comments">댓글</string>
+    <string name="tv_feed_comments_expand">개 모두 보기</string>
+    <string name="tv_uploaded_time_value">50</string>
+    <string name="tv_uploaded_time_text">초 전</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  create feed  -->
+    <string name="tv_toolbar">새 게시물</string>
+    <string name="tv_gallery">갤러리</string>
+    <string name="et_feed_content_hint">문구 입력...</string>
+    <string name="tv_tag_user">사람 태그하기</string>
+    <string name="tv_add_location">위치 추가</string>
+    <string name="tv_feed_other_media">다른 미디어에도 게시</string>
+    <string name="tv_facebook">Facebook</string>
+    <string name="tv_twitter">Twitter</string>
+    <string name="tv_tumblr">Tumblr</string>
+    <string name="tv_advanced_settings">고급 설정</string>
+
+    <!--  gallery permission  -->
+    <string name="permission_storage_1">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+    <string name="permission_storage_2">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+    <string name="title_activity_create_feed">CreateFeedActivity</string>
+
+
+</resources>

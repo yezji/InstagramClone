@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <shape>
+            <stroke android:color="#c4cbd2" android:width="1dp" />
+            <corners android:radius="4dp" />
+            <solid android:color="#fff" />
+        </shape>
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <corners android:radius="4dp" />
+                    <solid android:color="@color/blue_active" />
+                </shape>
+            </item>
+            <item
+                android:drawable="@drawable/ic_checkbox" />
+        </layer-list>
+    </item>
+</selector>
