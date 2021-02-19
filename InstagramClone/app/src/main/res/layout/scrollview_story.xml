@@ -48,7 +48,7 @@
                     android:id="@+id/iv_writer_img"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_bnv_mypage" />
+                    android:src="@drawable/ic_profile_placeholder" />
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_story_add"

@@ -1,15 +1,20 @@
 package com.green.instagramclone.src.main
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.green.instagramclone.R
 import com.green.instagramclone.R.color
+import com.green.instagramclone.config.ApplicationClass.Companion.USER_PROFILE_PICTURE
 import com.green.instagramclone.config.ApplicationClass.Companion.homeFragment
 import com.green.instagramclone.config.ApplicationClass.Companion.mainActivity
+import com.green.instagramclone.config.ApplicationClass.Companion.sSharedPreferences
 import com.green.instagramclone.config.BaseActivity
 import com.green.instagramclone.databinding.ActivityMainBinding
 import com.green.instagramclone.src.main.home.*
@@ -21,6 +26,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     private val resList = mutableListOf(R.id.menu_home, R.id.menu_search, R.id.menu_reels, R.id.menu_shopping, R.id.menu_mypage)
     lateinit var bottomNavigationView: BottomNavigationView
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,6 +39,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
         binding.bottomNavigation.menu.findItem(resList[0]).isChecked = true
         setBottomNavigationColorMode(whiteMode = true)
+
+        // set my profile at bnv
+        Glide.with(this)
+            .load(sSharedPreferences.getString(USER_PROFILE_PICTURE, ""))
+            .placeholder(getDrawable(R.drawable.ic_profile_placeholder))
+            .skipMemoryCache(true)
+            .diskCacheStrategy(DiskCacheStrategy.NONE).
+            into(binding.ivBnvProfile)
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             var menuIdx = 0
@@ -76,6 +90,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
                     transaction.replace(R.id.frame_layout, MyPageFragment(), tagList[menuIdx])
 
                     setBottomNavigationColorMode(whiteMode = true)
+
                 }
             }
             transaction.addToBackStack(tagList[menuIdx])

@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import com.green.instagramclone.R
 import com.green.instagramclone.config.ApplicationClass.Companion.USER_NICKNAME_IDX
+import com.green.instagramclone.config.ApplicationClass.Companion.USER_PROFILE_PICTURE
 import com.green.instagramclone.config.BaseActivity
 import com.green.instagramclone.databinding.ActivityLoginBinding
 import com.green.instagramclone.src.login.models.LoginResponse
@@ -26,6 +27,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // TODO : Dialog 적용하기
 //        dlg = DialogConfirm(applicationContext)
 //        dlg.setDialog(getString(R.string.tv_login_dialog_title), getString(R.string.tv_login_dialog_description))
 
@@ -95,6 +97,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
         if (response.isSuccess) {
             editor.putString(X_ACCESS_TOKEN, response.jwt)
             editor.putInt(USER_NICKNAME_IDX, response.userNickNameIdx)
+            editor.putString(USER_PROFILE_PICTURE, response.userProfilePicture)
             editor.commit()
             editor.apply()
 

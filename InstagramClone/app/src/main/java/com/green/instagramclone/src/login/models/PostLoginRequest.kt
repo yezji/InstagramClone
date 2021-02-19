@@ -5,5 +5,5 @@ import java.util.*
 
 data class PostLoginRequest(
     @SerializedName("userEmail") val userEmail: String,
-    @SerializedName("userPassword") val userPassword: String,
+    @SerializedName("userPassword") val userPassword: String
 )

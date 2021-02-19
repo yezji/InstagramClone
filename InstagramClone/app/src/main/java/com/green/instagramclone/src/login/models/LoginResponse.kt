@@ -5,5 +5,6 @@ import com.green.instagramclone.config.BaseResponse
 
 data class LoginResponse(
     @SerializedName("jwt") val jwt: String,
-    @SerializedName("userNickNameIdx") val userNickNameIdx: Int
+    @SerializedName("userNickNameIdx") val userNickNameIdx: Int,
+    @SerializedName("userProfilePicture") val userProfilePicture: String?
 ) : BaseResponse()

@@ -27,6 +27,7 @@ class ApplicationClass : Application() {
         val X_ACCESS_TOKEN = "X-ACCESS-TOKEN"
 
         val USER_NICKNAME_IDX = "userNickNameIdx"
+        val USER_PROFILE_PICTURE = "userProfilePicture"
 
         // Retrofit 인스턴스, 앱 실행시 한번만 생성하여 사용
         lateinit var sRetrofit: Retrofit

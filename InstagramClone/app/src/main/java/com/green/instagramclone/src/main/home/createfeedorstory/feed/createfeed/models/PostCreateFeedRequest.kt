@@ -8,7 +8,7 @@ data class PostCreateFeedRequest(
     @SerializedName("feedCreateDate") val feedCreateDate: String,
     @SerializedName("feedUpdateDate") val feedUpdateDate: String,
     @SerializedName("mediaIdx") val mediaIdx: Int,
-    @SerializedName("mediaList") val mediaList: MutableList<MediaURL>
+    @SerializedName("mediaList") val mediaList: ArrayList<MediaURL>
 )
 
 data class MediaURL(

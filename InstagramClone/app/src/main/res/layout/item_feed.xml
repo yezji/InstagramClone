@@ -56,7 +56,7 @@
                 android:id="@+id/iv_writer_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_bnv_mypage" />
+                android:src="@drawable/ic_profile_placeholder" />
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toTopOf="@id/cl_story"
         app:layout_constraintBottom_toBottomOf="@id/cl_story" />
     <ImageButton
+        android:id="@+id/ib_feed_menu"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/ic_feed_menu"
@@ -98,7 +99,7 @@
         android:id="@+id/ib_like"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/btn_like_selector"
+        android:src="@drawable/ic_feed_like"
         android:background="@color/transparency"
         android:scaleType="centerInside"
         android:layout_marginTop="10dp"
@@ -156,7 +157,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
 
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
 
         app:layout_constraintTop_toBottomOf="@id/ib_like"
         app:layout_constraintStart_toStartOf="@id/ib_like">
@@ -311,7 +312,6 @@
             android:id="@+id/tv_uploaded_time_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_uploaded_time_value"
             android:textSize="@dimen/tv_helper"
             android:textColor="@color/et_dialog_gray" />
         <TextView
